@@ -126,3 +126,18 @@ setInterval(() => {
 }, 4000);
 
 
+// <!-- -------------------Cards--------------------- -->
+
+
+// Card 4 image change on mouseover
+const card4 = document.getElementById('card4');
+const card4Img = document.getElementById('card4-img');
+
+card4.addEventListener('mouseover', () => {
+    card4Img.src = './images/image5.png'; // New image on hover
+});
+
+card4.addEventListener('mouseout', () => {
+    card4Img.src = './images/image4.png'; // Original image on mouseout
+});
+
