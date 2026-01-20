@@ -17,7 +17,7 @@ menuItems.forEach(item => {
             content.innerHTML = `
                 <a class="anker" href="#main-itemss"><div class="box">Main Items</div> </a>
                 <a class="anker" href="#T-shirts-main"> <div class="box">T shirt</div></a>
-                <a class="anker" href=""> <div class="box">Trending Items</div></a>
+                <a class="anker" href="#Trending"> <div class="box">Trending Items</div></a>
             `;
         }
 
@@ -178,22 +178,58 @@ videos.forEach(video => {
 
 // <!-- ------------------T shirts-------------- -->
 
+// first
+function changeImage() {
+    var image = document.getElementById("image")
 
-// const videos2 = document.querySelectorAll('.video-card video');
+    image.src = "./images/t2.png"
+}
 
-// videos.forEach(video => {
+function originalImage() {
+    var image = document.getElementById("image")
 
-//     video.addEventListener('mouseover', () => {
-//         video.play();
-//     });
+    image.src = "./images/T3.png"
+}
 
-//     video.addEventListener('mouseleave', () => {
-//         video.pause();
-//         video.currentTime = 0;
-//     });
+// second
+function changeImage2() {
+    var image = document.getElementById("image2")
 
-// });
+    image.src = "./images/t4.png"
 
-// video cards
+}
 
+function originalImage2() {
+    var image = document.getElementById("image2")
 
+    image.src = "./images/t2.png"
+}
+
+// 3th
+
+function changeImage3() {
+    var image = document.getElementById("image3")
+
+    image.src = "./images/t2.png"
+}
+
+function originalImage3() {
+    var image = document.getElementById("image3")
+
+    image.src = "./images/t3.png"
+}
+
+// 4th
+
+function changeImage4() {
+    var image = document.getElementById("image4")
+
+image.src = "./images/t3.png"
+}
+
+function originalImage4() {
+var image = document.getElementById("image4")
+
+image.src = ""
+}
+// <!-- ----------------------Trending--------------------- -->
