@@ -300,9 +300,9 @@ a {
 
 /* <!-- -------------------Cards--------------------- --> */
 
-#main-items {
-    /* background-color: #007bff; */
-}
+/* #main-items {
+    background-color: #007bff;
+} */
 
 #main-items>p {
     text-align: center;
@@ -312,9 +312,9 @@ a {
     font-weight: 500;
 }
 
-#main2{
+/* #main2{
 
-}
+} */
 
 
 
@@ -325,9 +325,9 @@ a {
     font-size: 34px;
 }
 
-#main3{
+/* #main3{
 
-}
+} */
 
 #para>p{
     color: black;
@@ -336,6 +336,14 @@ a {
 }
 
 .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-container2{
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -351,6 +359,8 @@ a {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
+
+ 
 
 
 .card img {
@@ -389,7 +399,7 @@ a {
 }
 
 /* Hover animation for first 3 cards */
-.card:nth-child(-n+3):hover {
+.card:nth-child(-n+5):hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
