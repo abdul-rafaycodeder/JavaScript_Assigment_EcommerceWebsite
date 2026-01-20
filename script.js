@@ -239,14 +239,14 @@ function originalImage4() {
 const headers = document.querySelectorAll('.policy-header');
 
 headers.forEach(header => {
-  header.addEventListener('click', () => {
-    const wrapper = header.parentElement;
-    const toggle = header.querySelector('.toggle');
+    header.addEventListener('click', () => {
+        const wrapper = header.parentElement;
+        const toggle = header.querySelector('.toggle');
 
-    wrapper.classList.toggle('active');
+        wrapper.classList.toggle('active');
 
-    toggle.textContent = wrapper.classList.contains('active') ? '−' : '+';
-  });
+        toggle.textContent = wrapper.classList.contains('active') ? '−' : '+';
+    });
 });
 
 
@@ -259,28 +259,29 @@ gsap.registerPlugin(ScrollTrigger);
    GLOBAL SMOOTH FEEL
 ========================= */
 gsap.defaults({
-  ease: "power3.out",
-  duration: 1
+    ease: "power3.out",
+    duration: 1
 });
 
 /* =========================
    NAVBAR LOAD ANIMATION
 ========================= */
 gsap.from(".top-nav a, .top-nav span, .fav-icon", {
-  y: -20,
-  opacity: 0,
-  stagger: 0.05
+    opacity: 1,
+    y: 10,
+    y: -10,
+    stagger: 5
 });
 
 gsap.from(".logo", {
-  scale: 0.7,
-  opacity: 0
+    scale: 30,
+    opacity: 1
 });
 
 gsap.from(".menu .nav-item", {
-  y: -30,
-  opacity: 0,
-  stagger: 0.1
+    y: -10,
+    opacity: 1,
+    stagger: 0.1
 });
 
 /* =========================
@@ -289,117 +290,117 @@ gsap.from(".menu .nav-item", {
 gsap.set(".dropdown", { y: -20, opacity: 0 });
 
 menuItems.forEach(item => {
-  item.addEventListener("mouseenter", () => {
-    gsap.to(".dropdown", {
-      display: "block",
-      y: 0,
-      opacity: 1,
-      duration: 0.4
+    item.addEventListener("mouseenter", () => {
+        gsap.to(".dropdown", {
+            display: "block",
+            y: 0,
+            opacity: 1,
+            duration: 0.4
+        });
     });
-  });
 });
 
 dropdown.addEventListener("mouseleave", () => {
-  gsap.to(".dropdown", {
-    y: -20,
-    opacity: 0,
-    duration: 0.3,
-    onComplete: () => dropdown.style.display = "none"
-  });
+    gsap.to(".dropdown", {
+        y: -20,
+        opacity: 0,
+        duration: 0.3,
+        onComplete: () => dropdown.style.display = "none"
+    });
 });
 
 /* =========================
    CAROUSEL ANIMATION
 ========================= */
 gsap.from(".carousel", {
-  scrollTrigger: {
-    trigger: ".carousel",
-    start: "top 80%"
-  },
-  scale: 0.9,
-  opacity: 0
+    scrollTrigger: {
+        trigger: ".carousel",
+        start: "top 80%"
+    },
+    scale: 0.9,
+    opacity: 0
 });
 
 /* =========================
    CARDS STAGGER (ALL SECTIONS)
 ========================= */
 gsap.utils.toArray(".card, .card1").forEach(card => {
-  gsap.from(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: "top 85%"
-    },
-    y: 60,
-    opacity: 0
-  });
+    gsap.from(card, {
+        scrollTrigger: {
+            trigger: card,
+            start: "top 85%"
+        },
+        y: 60,
+        opacity: 0
+    });
 });
 
 /* =========================
    VIDEO CARD HOVER SMOOTH
 ========================= */
 document.querySelectorAll(".video-card, .video-card1").forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    gsap.to(card, { scale: 1.08, duration: 0.4 });
-  });
-  card.addEventListener("mouseleave", () => {
-    gsap.to(card, { scale: 1, duration: 0.4 });
-  });
+    card.addEventListener("mouseenter", () => {
+        gsap.to(card, { scale: 1.08, duration: 0.4 });
+    });
+    card.addEventListener("mouseleave", () => {
+        gsap.to(card, { scale: 1, duration: 0.4 });
+    });
 });
 
 /* =========================
    SECTION HEADINGS REVEAL
 ========================= */
 gsap.utils.toArray(
-  "#Most-Loved-Products h2, #Top-Wishes h2, #Trending-main h2, #Style-in-Motion h1"
+    "#Most-Loved-Products h2, #Top-Wishes h2, #Trending-main h2, #Style-in-Motion h1"
 ).forEach(title => {
-  gsap.from(title, {
-    scrollTrigger: {
-      trigger: title,
-      start: "top 90%"
-    },
-    y: 40,
-    opacity: 0
-  });
+    gsap.from(title, {
+        scrollTrigger: {
+            trigger: title,
+            start: "top 90%"
+        },
+        y: 40,
+        opacity: 0
+    });
 });
 
 /* =========================
    MARQUEE SMOOTH FLOAT
 ========================= */
 gsap.to(".marquee", {
-  x: "-50%",
-  duration: 20,
-  ease: "linear",
-  repeat: -1
+    x: "-50%",
+    duration: 20,
+    ease: "linear",
+    repeat: -1
 });
 
 /* =========================
    POLICY ACCORDION ANIMATION
 ========================= */
 document.querySelectorAll(".policy-wrapper").forEach(wrapper => {
-  const content = wrapper.querySelector(".policy-content");
+    const content = wrapper.querySelector(".policy-content");
 
-  ScrollTrigger.create({
-    trigger: wrapper,
-    start: "top 90%",
-    onEnter: () => {
-      gsap.from(wrapper, {
-        opacity: 0,
-        y: 30,
-        duration: 0.6
-      });
-    }
-  });
+    ScrollTrigger.create({
+        trigger: wrapper,
+        start: "top 90%",
+        onEnter: () => {
+            gsap.from(wrapper, {
+                opacity: 0,
+                y: 30,
+                duration: 0.6
+            });
+        }
+    });
 });
 
 /* =========================
    FOOTER REVEAL
 ========================= */
 gsap.from(".newsletter-container, footer", {
-  scrollTrigger: {
-    trigger: ".newsletter",
-    start: "top 85%"
-  },
-  y: 80,
-  opacity: 0,
-  stagger: 0.2
+    scrollTrigger: {
+        trigger: ".newsletter",
+        start: "top 85%"
+    },
+    y: 80,
+    opacity: 0,
+    stagger: 0.2
 });
