@@ -314,18 +314,21 @@ gsap.defaults({
 ========================= */
 gsap.from(".top-nav a, .top-nav span, .fav-icon", {
     opacity: 1,
-    stagger: 5
+    stagger: 10
 });
 
 gsap.from(".logo", {
-    scale: 30,
+    scale: 80,
     opacity: 1
 });
 
 gsap.from(".menu .nav-item", {
-    y: -10,
+    y: -40,
     opacity: 1,
-    stagger: 0.1
+    stagger: 0.1,
+    
+    
+
 });
 
 /* =========================
@@ -465,3 +468,4 @@ searchInput.addEventListener('input', () => {
         document.getElementById('T-shirts-main').scrollIntoView({ behavior: 'smooth' });
     }
 });
+
