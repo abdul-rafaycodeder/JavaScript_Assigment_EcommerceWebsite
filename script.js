@@ -224,12 +224,14 @@ function originalImage3() {
 function changeImage4() {
     var image = document.getElementById("image4")
 
-image.src = "./images/t3.png"
+    image.src = "./images/t3.png"
 }
 
 function originalImage4() {
-var image = document.getElementById("image4")
+    var image = document.getElementById("image4")
 
-image.src = ""
+    image.src = "./images/t4.png"
 }
 // <!-- ----------------------Trending--------------------- -->
+
+
