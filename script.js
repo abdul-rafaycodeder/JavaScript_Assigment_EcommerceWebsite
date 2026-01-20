@@ -129,6 +129,7 @@ setInterval(() => {
 // <!-- -------------------Cards--------------------- -->
 
 
+
 // Card 4 image change on mouseover
 const card4 = document.getElementById('card4');
 const card4Img = document.getElementById('card4-img');
