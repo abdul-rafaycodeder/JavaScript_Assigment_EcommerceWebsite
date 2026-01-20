@@ -329,6 +329,8 @@ a {
 
 } */
 
+
+
 #para>p{
     color: black;
     text-align: center;
@@ -399,11 +401,11 @@ a {
 }
 
 /* Hover animation for first 3 cards */
-.card:nth-child(-n+5):hover {
+.card:nth-child(-n+4):hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.card:nth-child(-n+3):hover img {
+.card:nth-child(-n+4):hover img {
     transform: scale(1.1);
 }

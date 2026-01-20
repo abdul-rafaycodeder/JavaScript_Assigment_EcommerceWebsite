@@ -129,16 +129,29 @@ setInterval(() => {
 // <!-- -------------------Cards--------------------- -->
 
 
+// // First card
+// var card5 = document.getElementById('card5');
+// const card4Img = document.getElementById('card4-img');
 
-// Card 4 image change on mouseover
-const card4 = document.getElementById('card4');
-const card4Img = document.getElementById('card4-img');
+// card5.addEventListener('mouseover', () => {
+//     card4Img.src = './images/image4.png'; // New image on hover
+// });
 
-card4.addEventListener('mouseover', () => {
-    card4Img.src = './images/image4.png'; // New image on hover
+// card5.addEventListener('mouseout', () => {
+//     card4Img.src = './images/image5.png'; // Original image on mouseout
+// });
+
+const images = document.querySelectorAll('.card img');
+
+images.forEach(img => {
+    const originalSrc = img.src;
+    const hoverSrc = img.getAttribute('data-hover');
+
+    img.addEventListener('mouseover', () => {
+        img.src = "./images/image5.png";
+    });
+
+    img.addEventListener('mouseleave', () => {
+        img.src = "./images/image6.png";
+    });
 });
-
-card4.addEventListener('mouseout', () => {
-    card4Img.src = './images/image5.png'; // Original image on mouseout
-});
-
