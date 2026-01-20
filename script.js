@@ -235,3 +235,19 @@ function originalImage4() {
 // <!-- ----------------------Trending--------------------- -->
 
 
+// - //
+
+const headers = document.querySelectorAll('.policy-header');
+
+headers.forEach(header => {
+  header.addEventListener('click', () => {
+    const wrapper = header.parentElement;
+    const toggle = header.querySelector('.toggle');
+
+    wrapper.classList.toggle('active');
+
+    toggle.textContent = wrapper.classList.contains('active') ? '−' : '+';
+  });
+});
+
+

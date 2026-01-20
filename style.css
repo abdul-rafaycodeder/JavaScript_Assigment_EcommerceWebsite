@@ -509,12 +509,12 @@ a {
 
 /* <!-- ------------------T shirts-------------- --> */
 
-#main-T-shirts{
+#main-T-shirts {
     margin-top: 50px;
     /* background-color: #0056b3; */
 }
 
-#T-shirts{
+#T-shirts {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
@@ -522,7 +522,7 @@ a {
     color: #007bff;
 }
 
-#Top-Wishes{
+#Top-Wishes {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
@@ -530,7 +530,7 @@ a {
     margin-top: 10px;
 }
 
-#para1{
+#para1 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 10px;
@@ -540,12 +540,12 @@ a {
 
 /* <!-- ----------------------Trending--------------------- --> */
 
-#Trending-main{
+#Trending-main {
     margin-top: 50px;
     /* background-color: #007bff; */
 }
 
-#Trending>p{
+#Trending>p {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
@@ -553,8 +553,228 @@ a {
     color: #007bff;
 }
 
-#para3{
+#para3 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 20px;
+}
+
+/* <!-- marquee --> */
+
+#marq-text {
+    margin-top: 60px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+}
+
+/* Wrapper */
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px 0;
+}
+
+/* Moving row */
+.marquee {
+    display: flex;
+    gap: 20px;
+    animation: marquee-scroll 20s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-wrapper:hover .marquee {
+    animation-play-state: paused;
+}
+
+/* Card */
+.marquee-card {
+    min-width: 160px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.marquee-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.marquee-card p {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Card hover */
+.marquee-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Animation */
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Shop the Feed */
+
+#Shop-the-Feed-main{
+    /* background-color: #007bff; */
+}
+
+#Shop-the-Feed{
+    font-size: 20px;
+    font-weight: 700;
+    color: #007bff;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Style-in-Motion{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+
+#para5{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider {
+    margin-bottom: 40px;
+    margin-top: 70px;
+    display: flex;
+    gap: 20px;
+    /* overflow-x: auto; */
+    padding-bottom: 10px;
+}
+
+/* Card */
+.video-card1 {
+     
+    position: relative;
+    width: 260px;
+    height: 420px;
+    border-radius: 22px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Video always playing */
+.video-card1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Bottom overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #fff;
+}
+
+.brand {
+    font-size: 12px;
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+.overlay h4 {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* ABOUT US */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  padding: 40px;
+}
+
+.policy-container {
+    margin-top: 100px;
+  max-width: 800px;
+  margin: auto;
+  border-top: 1px solid #eee;
+}
+
+.policy-wrapper {
+  border-bottom: 1px solid #eee;
+}
+
+/* Header */
+.policy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 10px;
+  cursor: pointer;
+}
+
+.policy-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policy-header h3 {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.toggle {
+  font-size: 26px;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+/* Content */
+.policy-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 10px;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.policy-content p {
+  padding: 15px 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Active */
+.policy-wrapper.active .policy-content {
+  max-height: 200px;
+  opacity: 1;
 }
