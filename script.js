@@ -1,3 +1,49 @@
+// function locomotivanimaon() {
+//     gsap.registerPlugin(ScrollTrigger);
+
+//     const locoScroll = new LocomotiveScroll({
+//         el: document.querySelector("#realMain"),
+//         smooth: true,
+
+//         // for tablet smooth
+//         tablet: { smooth: true },
+
+//         // for mobile
+//         smartphone: { smooth: true }
+//     });
+//     locoScroll.on("scroll", ScrollTrigger.update);
+
+//     ScrollTrigger.scrollerProxy("#realMain", {
+//         scrollTop(value) {
+//             return arguments.length
+//                 ? locoScroll.scrollTo(value, 0, 0)
+//                 : locoScroll.scroll.instance.scroll.y;
+//         },
+//         getBoundingClientRect() {
+//             return {
+//                 top: 0,
+//                 left: 0,
+//                 width: window.innerWidth,
+//                 height: window.innerHeight
+//             };
+//         }
+
+
+//     });
+
+
+
+
+
+//     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+//     ScrollTrigger.refresh();
+
+// }
+
+// locomotivanimaon()
+
+
 const menuItems = document.querySelectorAll(".menu-item");
 const dropdown = document.getElementById("dropdown");
 const content = document.getElementById("dropdown-content");
@@ -417,5 +463,5 @@ searchInput.addEventListener('input', () => {
         document.getElementById('main-itemss').scrollIntoView({ behavior: 'smooth' });
     } else if (value.includes('t shirts')) {
         document.getElementById('T-shirts-main').scrollIntoView({ behavior: 'smooth' });
-    } 
+    }
 });
