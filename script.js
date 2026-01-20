@@ -268,8 +268,6 @@ gsap.defaults({
 ========================= */
 gsap.from(".top-nav a, .top-nav span, .fav-icon", {
     opacity: 1,
-    y: 10,
-    y: -10,
     stagger: 5
 });
 
@@ -403,4 +401,21 @@ gsap.from(".newsletter-container, footer", {
     y: 80,
     opacity: 0,
     stagger: 0.2
+});
+
+// input
+
+
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('input', () => {
+    const value = searchInput.value.toLowerCase();
+
+    if (value.includes('trending')) {
+        document.getElementById('Trending-main').scrollIntoView({ behavior: 'smooth' });
+    } else if (value.includes('main items')) {
+        document.getElementById('main-itemss').scrollIntoView({ behavior: 'smooth' });
+    } else if (value.includes('t shirts')) {
+        document.getElementById('T-shirts-main').scrollIntoView({ behavior: 'smooth' });
+    } 
 });
