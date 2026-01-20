@@ -327,7 +327,7 @@ gsap.from(".menu .nav-item", {
     opacity: 1,
     stagger: 0.1,
     
-    
+
 
 });
 
@@ -468,4 +468,5 @@ searchInput.addEventListener('input', () => {
         document.getElementById('T-shirts-main').scrollIntoView({ behavior: 'smooth' });
     }
 });
+
 
