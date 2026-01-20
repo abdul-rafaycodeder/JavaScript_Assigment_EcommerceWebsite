@@ -141,7 +141,7 @@ setInterval(() => {
 //     card4Img.src = './images/image5.png'; // Original image on mouseout
 // });
 
-const images = document.querySelectorAll('.card img');
+const images = document.querySelectorAll('.card1 img');
 
 images.forEach(img => {
     const originalSrc = img.src;
@@ -154,4 +154,23 @@ images.forEach(img => {
     img.addEventListener('mouseleave', () => {
         img.src = "./images/image6.png";
     });
+});
+
+
+// <!-- -------------------video cards--------------- -->
+
+
+const videos = document.querySelectorAll('.video-card video');
+
+videos.forEach(video => {
+
+    video.addEventListener('mouseover', () => {
+        video.play();
+    });
+
+    video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+
 });

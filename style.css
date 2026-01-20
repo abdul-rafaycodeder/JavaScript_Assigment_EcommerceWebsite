@@ -318,7 +318,7 @@ a {
 
 
 
-#Most-Loved-Products>h2{
+#Most-Loved-Products>h2 {
     color: black;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -331,7 +331,7 @@ a {
 
 
 
-#para>p{
+#para>p {
     color: black;
     text-align: center;
     margin-bottom: 50px;
@@ -344,7 +344,7 @@ a {
     justify-content: center;
 }
 
-.card-container2{
+.card-container2 {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -362,8 +362,21 @@ a {
     cursor: pointer;
 }
 
- 
+.card1 {
+    background: #fff;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
 
+.card1 img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
 
 .card img {
     width: 100%;
@@ -400,6 +413,10 @@ a {
     background: #0056b3;
 }
 
+.card1-details button:hover {
+    background: #0056b3;
+}
+
 /* Hover animation for first 3 cards */
 .card:nth-child(-n+4):hover {
     transform: translateY(-10px) scale(1.05);
@@ -407,5 +424,83 @@ a {
 }
 
 .card:nth-child(-n+4):hover img {
+    transform: scale(1.1);
+}
+
+.card1:nth-child(-n+4):hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card11:nth-child(-n+4):hover img {
+    transform: scale(1.1);
+}
+
+
+/* <!-- -------------------video cards--------------- --> */
+
+
+
+.card-container3 {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card video {
+    width: 100%;
+    height: 295px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.card-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-details h3 {
+    margin-bottom: 10px;
+}
+
+.card-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.card-details button {
+    padding: 8px 15px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-details button:hover {
+    background: #0056b3;
+}
+
+/* Hover animation */
+.video-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-card:hover video {
     transform: scale(1.1);
 }
