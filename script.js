@@ -15,8 +15,8 @@ menuItems.forEach(item => {
 
         if (menu === "home") {
             content.innerHTML = `
-                <a class="anker" href=""><div class="box">Main Items</div> </a>
-                <a class="anker" href=""> <div class="box">T shirt</div></a>
+                <a class="anker" href="#main-itemss"><div class="box">Main Items</div> </a>
+                <a class="anker" href="#T-shirts-main"> <div class="box">T shirt</div></a>
                 <a class="anker" href=""> <div class="box">Trending Items</div></a>
             `;
         }
@@ -177,3 +177,23 @@ videos.forEach(video => {
 
 
 // <!-- ------------------T shirts-------------- -->
+
+
+// const videos2 = document.querySelectorAll('.video-card video');
+
+// videos.forEach(video => {
+
+//     video.addEventListener('mouseover', () => {
+//         video.play();
+//     });
+
+//     video.addEventListener('mouseleave', () => {
+//         video.pause();
+//         video.currentTime = 0;
+//     });
+
+// });
+
+// video cards
+
+
