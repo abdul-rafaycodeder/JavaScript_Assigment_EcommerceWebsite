@@ -2,13 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+ }
 
 
 
 html {
     scroll-behavior: smooth;
+}
+
+#mainFullPage{
+    overflow: hidden;
 }
 
 .anker {
@@ -195,19 +198,7 @@ a {
     transform: translateY(-10px);
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-
-}
 
 .MAIN {
     z-index: 999;
@@ -622,7 +613,7 @@ a {
 }
 
 /* Animation */
-@keyframes marquee-scroll {
+/* @@keyframes marquee-scroll {
     from {
         transform: translateX(0);
     }
@@ -630,7 +621,7 @@ a {
     to {
         transform: translateX(-50%);
     }
-}
+} */
 
 /* Shop the Feed */
 
@@ -940,3 +931,107 @@ footer {
     color: white;
 }
 
+@media (max-width: 576px) {
+
+  body {
+    padding: 10px;
+  }
+
+  /* TOP NAV */
+  .top-nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* MAIN NAV */
+  .main-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 42px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  /* MENU */
+  .menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* CAROUSEL */
+  .carousel img {
+    height: 250px;
+  }
+
+  /* CARDS */
+  .card,
+  .card1 {
+    width: 90%;
+  }
+
+  /* VIDEO CARDS */
+  .video-card1 {
+    width: 90%;
+    height: 360px;
+  }
+
+  /* NEWSLETTER */
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+  .logo {
+    font-size: 60px;
+  }
+
+  .card,
+  .card1 {
+    width: 30%;
+  }
+
+  .newsletter-container {
+    gap: 30px;
+  }
+
+}
+
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+  .card,
+  .card1 {
+    width: 220px;
+  }
+
+}
+
+
+@media (min-width: 1400px) {
+
+  .logo {
+    font-size: 80px;
+  }
+
+  .card,
+  .card1 {
+    width: 260px;
+  }
+
+  .video-card1 {
+    width: 300px;
+    height: 460px;
+  }
+
+}
